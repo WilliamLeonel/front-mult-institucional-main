@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import "./style.css";
-import { IModalProps } from "../../interfaces";
+import { IModalProps } from "../../assets/interfaces";
+
 
 const ModalNavigation = ({ isOpen, onClose }: IModalProps) => {
   if (!isOpen) {

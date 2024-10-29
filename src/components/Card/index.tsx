@@ -1,18 +1,18 @@
-import React from "react";
+
+
+import { ICardProps } from "../../assets/interfaces";
 import "./style.css";
 
-const Card: React.FC = () => {
+const Card = ({ content }: ICardProps) => {
   return (
     <div className="card">
       <img
         className="img-card"
-        src="src\\assets\\escolta.png"
-        alt="representação escolta armada"
+        src={content.image}
+        alt={`representação ${content.title}`}
       />
       <span className="span-card">Escolta Armada</span>
-      <p className="p-card">
-        Serviço de escolta armada para seu evento ou empresa
-      </p>
+      <p className="p-card">{content.description}</p>
     </div>
   );
 };

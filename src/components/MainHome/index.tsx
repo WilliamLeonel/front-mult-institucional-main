@@ -5,9 +5,8 @@ import Main from "../Main";
 const MainHome: React.FC = () => {
   return (
     <Main>
-      <h1>SLOGAN EM CAIXA ALTA</h1>
-      <p>Nós oferecemos soluções inovadoras para melhorar a sua empresa.</p>
-      <button className="cta-button">Faça um Orçamento</button>
+      <h1>Bem-vindo! Inovação e paixão em cada moto para resultados excepcionais. Vamos acelerar juntos!</h1>
+      <button className="cta-button">CONFIRA NOSSAS MOTOS</button>
     </Main>
   );
 };

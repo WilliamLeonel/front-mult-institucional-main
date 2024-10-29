@@ -1,6 +1,7 @@
+import { IHeaderProps } from "../../assets/interfaces";
 import Header from "../../components/Header";
 import MainHome from "../../components/MainHome";
-import { IHeaderProps } from "../../interfaces";
+
 
 const Home = ({ isOpen, setIsOpen, onClose }: IHeaderProps) => {
   return (

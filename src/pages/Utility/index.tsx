@@ -1,14 +1,29 @@
-import React from "react";
 import Header from "../../components/Header";
 import Main from "../../components/Main";
 import Card from "../../components/Card";
 
-const Utility: React.FC = () => {
+import { useEffect, useState } from "react";
+import { IHeaderProps } from "../../assets/interfaces";
+import { UtilityService } from "../../helpers/Services/UtilityService.ts";
+
+const utilityService = new UtilityService();
+
+const Utility = ({ isOpen, setIsOpen, onClose }: IHeaderProps) => {
+  const [cards, setCards] = useState([]);
+  
+  useEffect(() => {
+    utilityService.getAll().then((response) => {
+      setCards(response.data);
+    });
+  });
+  
   return (
     <>
-      <Header />
+      <Header isOpen={isOpen} setIsOpen={setIsOpen} onClose={onClose} />
       <Main>
-        <Card />
+        {cards.map((element) => {
+          return <Card content={element} />;
+        })}
       </Main>
     </>
   );
