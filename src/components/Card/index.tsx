@@ -11,7 +11,7 @@ const Card = ({ content }: ICardProps) => {
         src={content.image}
         alt={`representação ${content.title}`}
       />
-      <span className="span-card">Escolta Armada</span>
+      <span className="span-card">{content.title}</span>
       <p className="p-card">{content.description}</p>
     </div>
   );
